@@ -7,6 +7,8 @@ import 'package:news_app/features/presentation/pages/news_home/bloc/news_home_bl
 import 'package:news_app/features/presentation/pages/news_home/ui/news_home_view.dart';
 
 void main() {
+
+  Bloc.observer = AppBlocObserver();
   runApp(MultiBlocProvider(providers: [
     BlocProvider<AppNewsBloc>(
       create: (context) => AppNewsBloc(),
